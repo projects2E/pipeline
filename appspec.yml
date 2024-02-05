@@ -8,12 +8,12 @@ permissions:
     pattern: "**"
     owner: root
     group: root
-hooks:
-  BeforeInstall:
-    - location: scripts/beforeInstall.sh
-      timeout: 10
-      runas: root
-  ApplicationStart:
-    - location: scripts/applicationStart.sh
-      timeout: 10
-      runas: root
+# hooks:
+#   BeforeInstall:
+#     - location: scripts/beforeInstall.sh
+#       timeout: 10
+#       runas: root
+#   ApplicationStart:
+#     - location: scripts/applicationStart.sh
+#       timeout: 10
+#       runas: root
