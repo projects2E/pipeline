@@ -13,27 +13,7 @@ hooks:
     - location: scripts/beforeInstall.sh
       timeout: 10
       runas: ec2-user
-  DownloadBundle:
-    - location: scripts/downloadBundle.sh
-      timeout: 10
-      runas: ec2-user
-  Install:
-    - location: scripts/install.sh
-      timeout: 10
-      runas: ec2-user
-  AfterInstall:
-    - location: scripts/afterInstall.sh
-      timeout: 10
-      runas: ec2-user
   ApplicationStart:
     - location: scripts/applicationStart.sh
-      timeout: 10
-      runas: ec2-user
-  ApplicationStop:
-    - location: scripts/applicationStop.sh
-      timeout: 10
-      runas: ec2-user
-  ValidateService:
-    - location: scripts/validateService.sh
       timeout: 10
       runas: ec2-user
