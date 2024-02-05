@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /root/projects/pipeline
+permissions:
+  - object: /root/projects/pipeline
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeInstall.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/applicationStart.sh
+      timeout: 300
+      runas: ec2-user
