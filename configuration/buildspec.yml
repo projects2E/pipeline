@@ -29,7 +29,8 @@ phases:
 # used only for building and testing.
 # ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
 artifacts:
-  base-directory: dist  # Especifica el directorio base desde donde se toman los artefactos
-  files:
-    - '**/*'
+  files: 
+    - dist/**/*
+  base-directory: .   # Definir el directorio base para mantener la estructura de carpetas
+  discard-paths: no 
   name: $ARCHIVE_NAME
