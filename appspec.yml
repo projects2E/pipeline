@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /ec2-user/projects/pipeline
+    destination: /ec2-user/projects/pipeline/dara
 permissions:
-  - object: /ec2-user/projects/pipeline
+  - object: /ec2-user/projects/pipeline/dara
     pattern: "**"
     owner: root
     group: root
