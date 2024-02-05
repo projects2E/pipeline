@@ -18,6 +18,7 @@ phases:
     commands:
       - COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION
       - ARCHIVE_NAME="mi_aplicacion_$COMMIT_ID.zip"
+      - echo $ARCHIVE_NAME
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - npm run build
