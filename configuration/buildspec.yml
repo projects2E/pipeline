@@ -34,4 +34,4 @@ artifacts:
     - dist/**/*
   base-directory: .   # Definir el directorio base para mantener la estructura de carpetas
   discard-paths: no 
-  name: fichero
+  name: $ARCHIVE_NAME
