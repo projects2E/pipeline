@@ -10,7 +10,7 @@ phases:
     #   - npm install
   pre_build:
     commands:
-      - COMMIT_ID=$(git rev-parse --short HEAD)
+      - COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION
       - ARCHIVE_NAME="mi_aplicacion_$COMMIT_ID.zip"
       - echo Installing source NPM dependencies...
       - npm install
