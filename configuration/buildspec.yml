@@ -10,6 +10,8 @@ phases:
     #   - npm install
   pre_build:
     commands:
+      - COMMIT_ID=$(git rev-parse --short HEAD)
+      - ARCHIVE_NAME="mi_aplicacion_$COMMIT_ID.zip"
       - echo Installing source NPM dependencies...
       - npm install
       - npm install
@@ -29,3 +31,4 @@ artifacts:
   base-directory: dist  # Especifica el directorio base desde donde se toman los artefactos
   files:
     - '**/*'
+  name: "$ARCHIVE_NAME"
