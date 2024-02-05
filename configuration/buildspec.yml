@@ -10,13 +10,14 @@ phases:
     #   - npm install
   pre_build:
     commands:
-      - COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION
-      - ARCHIVE_NAME="mi_aplicacion_$COMMIT_ID.zip"
+     
       - echo Installing source NPM dependencies...
       - npm install
       - npm install
   build:
     commands:
+      - COMMIT_ID=$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - ARCHIVE_NAME="mi_aplicacion_$COMMIT_ID.zip"
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - npm run build
@@ -30,5 +31,5 @@ phases:
 artifacts:
   base-directory: dist  # Especifica el directorio base desde donde se toman los artefactos
   files:
-    - 'dist/**/*'
-  name: "$ARCHIVE_NAME"
+    - '**/*'
+  name: $ARCHIVE_NAME
