@@ -32,6 +32,7 @@ phases:
 artifacts:
   files: 
     - dist/**/*
+    - appspec.yml
   base-directory: .   # Definir el directorio base para mantener la estructura de carpetas
   discard-paths: no 
   name: $ARCHIVE_NAME
