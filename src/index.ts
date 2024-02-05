@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
   const customText = process.env.API_APP;
-  res.json({env: customText, ack: "success"});
+  res.json({env: customText, ack: "success", data: "payload"});
 });
 
 app.listen(port, () => {
